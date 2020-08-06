@@ -1,0 +1,13 @@
+.collapse {
+    animation: fadeDown .5s;
+}
+
+@keyframes fadeDown {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 65px;
+    }
+}

@@ -1,0 +1,17 @@
+<div class="accordion" id="accordionExample">
+    <div class="card" *ngFor="let FAQ of FAQs; let i = index">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button (click)="openQuestionChange(i)" class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            {{ FAQ.title }}
+          </button>
+        </h2>
+      </div>
+  
+      <div *ngIf="i === openQuestion" id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          {{ FAQ.answer }}
+        </div>
+      </div>
+    </div>
+</div>

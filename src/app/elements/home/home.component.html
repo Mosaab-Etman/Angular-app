@@ -1,0 +1,16 @@
+<app-divider>
+    <h1>First: Jumborton</h1>
+</app-divider>
+<app-jumborton 
+    [title]="title"
+    [description]="description"
+></app-jumborton>
+
+<app-divider>Second: Media List</app-divider>
+<ul class="list-unstyled">
+    <app-media 
+        *ngFor="let media of medias"
+        [image]="media.imgUrl" [head]="media.header" 
+        [description]="media.description">
+    </app-media>
+</ul>

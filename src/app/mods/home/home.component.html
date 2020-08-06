@@ -1,0 +1,9 @@
+<app-divider><h1>Modal</h1></app-divider>
+<button class="btn btn-danger" (click)="modalStatusChange()">Show my Modal</button>
+<app-modal *ngIf="modalStatus" (close)="modalStatusChange()">
+    <h5>I'm beautiful title</h5>
+    <div modalTitle>Hello again my friends, Do you remember me?</div>
+</app-modal>
+
+<app-divider><h1>Accordion</h1></app-divider>
+<app-accordion [FAQs]="FAQs"></app-accordion>
